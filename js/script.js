@@ -1,5 +1,196 @@
-// 404
+// 417
+// Привяжите к тегу ul обработчик клика. 
+// В этом обработчике проверяйте с помощью свойства tagName, по какому тегу был клик. 
+// Если клик был по тегу li - добавьте в конец текста этого тега восклицательный знак. 
+// А если клик был по тегу ul - выведите информацию об этом в консоль.
+// let list = document.querySelector('#elem');
+// list.addEventListener('click', function(event) {
+//     if (event.target.tagName === 'LI') {
+//         event.target.textContent += '!'
+//     } else if (event.target.tagName === 'UL') {
+//         console.log('Жмакнули по списку')
+//     };
+// });
 
+// 416
+// при клике на элемент этот элемент красился в зеленый цвет, а при двойном клике - в красный.
+// мой вариант:
+// let elem = document.querySelector('#elem');
+// function func(event) {
+// 	if (event.type === 'click') {
+//         if (event.detail === 1) {         
+//             elem.style.backgroundColor = 'green';
+//         }
+//     } else if (event.type === 'dblclick') {
+//         elem.style.backgroundColor = 'red';
+//     };
+// }
+// elem.addEventListener('click', func);
+// elem.addEventListener('dblclick', func);
+
+// 415 
+// вывод координатов мыши
+// let elem = document.getElementById('elem');
+// document.addEventListener('mousemove', function(event) {
+//     elem.innerHTML = event.clientX + ':' + event.clientY;
+// });
+
+// 414
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('click', function(event) {
+//     console.log(event);
+// });
+
+// 413 - 2
+// По нажатию на кнопку добавьте в конец текста выбранного пункта восклицательный знак.
+// let select = document.querySelector('select');
+// let btn = document.querySelector('button');
+// if (btn && select) {
+//     btn.addEventListener('click', function() {
+//         let selected = select[select.selectedIndex];
+//         selected.text += '!';
+//     });
+// }
+
+
+// 413 - 1
+// По нажатию на кнопку выведите на экран текст отмеченного пункта списка.
+// let select = document.querySelector('select');
+// let btn = document.querySelector('button');
+// let text = document.querySelector('p');
+// if (select && btn && text) {
+//     btn.addEventListener('click', function() {
+//         let selected = select[select.selectedIndex];
+//         text.textContent = selected.text;
+//     });
+// };
+
+// 412
+// По клику на кнопку сделайте отмеченным последний пункт списка.
+// let select = document.querySelector('select');
+// let btn = document.querySelector('button');
+// if (select && btn) {
+//     btn.addEventListener('click', function() {
+//         select.lastElementChild.selected = true;
+//     });
+// };
+
+// 411
+// и для выбранного пункта в конец текста добавьте восклицательный знак, 
+// а для невыбранных пунктов - вопросительный.
+// let select = document.querySelector('select');
+// if (select) {
+//     for (let option of select) {
+//         if (option.selected) {
+//             option.text += '!'
+//         } else {
+//             option.text += '?'
+//         };
+//     };
+// };
+
+// 410
+// Переберите все пункты списка циклом 
+// и в конец текста каждого пункта добавьте значение его атрибута value.
+// let select = document.querySelector('select');
+// if (select) {
+//     for (let option of select) {
+//         option.text += option.value;
+//         console.log(option.text);
+//     };
+// }
+
+// 408 - 1
+// В инпут вводится какое-то число. 
+// По потери фокуса сделайте выделенным пункт списка, номер которого равен значению из инпута.
+// let input = document.querySelector('input');
+// let select = document.querySelector('select');
+// if (select && input) {
+//     input.addEventListener('blur', function() {
+//         select.selectedIndex = input.value;
+//     });
+// }; 
+
+// 406 
+// выпадающий список с названиями дней недели. В качестве атрибутов value пунктов списка добавьте номера дней недели от 1 до 7. 
+// По изменению списка выведите на экран сообщение о том, выбран выходной день или рабочий.
+// let select = document.querySelector('#select');
+// let text = document.querySelector('.www');
+// if (select && text) {
+//     select.addEventListener('change', function() {
+//         if (this.value <=5) {
+//             text.textContent = 'Выбран рабочий день'
+//         } else {
+//             text.textContent = 'Выбран выходной день'
+//         };
+//     });
+// };
+
+// 405 - 2
+// let select = document.querySelector('#select');
+// let text = document.querySelector('.www');
+
+// if (select && text) {
+//     select.addEventListener('change', function() {
+//         let year = Number(select.value);
+//         if (year % 4 == 0 && year % 100 !=0 || year % 400 == 0) {
+//             text.textContent = 'Високосный';
+//         } else {
+//             text.textContent = 'Не високосный';
+//         };
+//     });
+// } else {
+//     console.log('Элементы не найдены');
+// };
+
+// 405 - 1
+// По клику на кнопку выведите текст выбранного пункта списка в абзац.
+// let select = document.querySelector('#select');
+// let btn = document.querySelector('button');
+// let text = document.querySelector('.www');
+// if (btn) {
+//     btn.addEventListener('click', function() {
+//         if (select && text) {
+//             text.textContent = select.value;
+//         };
+//     });
+// };
+
+
+// 404 - 3
+// По клику на кнопку, если чекбокс отмечен, 
+// то должно вывестись одно значение, а если не отмечен - другое:
+// let checkbox = document.querySelector('input[type="checkbox"]');
+// let button = document.querySelector('button');
+// button.addEventListener('click', function() {
+// 	if (checkbox.checked) {
+// 		console.log('+++');
+// 	} else {
+// 		console.log('---');
+// 	};
+// });
+
+// 404 - 2
+// По клику на кнопку в див должно записаться или одно, или другое значение:
+// let checkbox = document.querySelector('input[type="checkbox"]');
+// let button = document.querySelector('button');
+// let div = document.querySelector('div');
+// button.addEventListener('click', function() {
+// 	if (checkbox.checked) {
+// 		div.textContent = '111';
+// 	} else {
+// 		div.textContent = '222';
+// 	};
+// });
+
+// 404 - 1
+// По потери фокуса текст из textarea должен записаться в див:
+// let textarea = document.querySelector('textarea');
+// let div = document.querySelector('div');
+
+// textarea.addEventListener('blur', function() {
+// 	div.textContent = textarea.value;
+// });
 
 // 403
 // Даны два инпута. 
