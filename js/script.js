@@ -1,3 +1,114 @@
+// ИЗ ВИДЕО ЛАМКОВА
+// elem.addEventListener('click', (event) => {
+//     const { code, metakey } = event ---- деструктуризация для сокращения кода
+//     if (code === 'Numpad3') {
+//         event.preventDefault()
+//     }
+// })
+
+// 424 
+
+// 423 - 2
+// чтобы при клике на li, ей в конец добавлялся восклицательный знак, 
+// а при клике на ul в консоль выводилась информация об этом.
+// let div = document.querySelector('div');
+// let list = document.querySelector('ul');
+// let item = document.querySelector('li');
+// div.addEventListener('click', function(event) {
+//     if (event.target.matches('div')) {
+//         console.log('Кликнула по диву')
+//     } else if (event.target.matches('ul')) {
+//         console.log('Кликнула по списку')
+//     } else if (event.target.matches('li')) {
+//         event.target.textContent += '!';
+//     }; 
+// }); 
+
+// 422 - 1
+// Навешайте на див обработчик клика. В этом обработчике определите, 
+// в каком из тегов сработало событие.
+// let div = document.querySelector('div');
+// let list = document.querySelector('ul');
+// let item = document.querySelector('li');
+// div.addEventListener('click', function(event) {
+//     if (event.target.matches('div')) {
+//         console.log('Кликнула по диву')
+//     } else if (event.target.matches('ul')) {
+//         console.log('Кликнула по списку')
+//     } else if (event.target.matches('li')) {
+//         console.log('Кликнула по элементу списка')
+//     }; 
+// });
+
+// 420 - 2
+// Даны два инпута, абзац и ссылка. 
+// Пусть в инпуты вводятся числа. 
+// Сделайте так, чтобы по клику на ссылку в абзац записалась сумма введенных чисел.
+// let text = document.querySelector('p');
+// let input1 = document.querySelector('#elem');
+// let input2 = document.querySelector('#elem2');
+// let link = document.querySelector('a');
+
+// link.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     text.textContent = Number(input1.value) + Number(input2.value);
+// });
+
+
+// 420 - 1
+// Даны ссылки. Сделайте так, 
+// чтобы по клику на ссылку ей в конец записывался ее href, а перехода по ссылке не происходило.
+// let links = document.querySelectorAll('a');
+// for (let link of links) {
+//     link.addEventListener('click', function(event) {
+//         event.preventDefault();
+//         link.textContent += link.href;
+//     });
+// };
+
+// 419 - 2
+// чтобы по клику на любую li, 
+// в конец ее текста добавлялось число 1, если нажата клавиша Ctrl, и число 2, если нажата клавиша Shift.
+// let elem = document.getElementById('elem');
+// elem.addEventListener('click', function(event) {
+//     if (event.target.tagName === 'LI') {
+//         if (event.ctrlKey) {
+//             event.target.textContent += '1';
+//         } else if (event.altKey) {
+//             event.target.textContent += '2';
+//         };
+//     };
+// })
+
+// 419 - 1
+// Дан элемент. Сделайте так, 
+// чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Alt.
+// let text = document.querySelector('p');
+// text.addEventListener('click', function(event) {
+//     if (event.altKey) {
+//         text.style.backgroundColor = 'red'
+//     };
+// });
+
+// 418 - 5
+// Дан абзац и инпут. В него вводится текст и нажимается клавиша Enter. 
+// чтобы в этот момент введенный текст попадал в абзац под инпутом, а содержимое инпута очищалось.
+// let input = document.querySelector('input');
+// let text = document.querySelector('p');
+// input.addEventListener('keypress', function(event) {
+//     if (event.key === 'Enter') {
+//         text.textContent = input.value;
+//         input.value = '';
+//     };
+// });
+
+// 418 - 1
+// Сделайте инпут, который будет по вводу выводить значения введенных клавиш и их коды.
+// let input = document.querySelector('input');
+// input.addEventListener('keypress', function(event) {
+//     console.log(`Символ: ${event.key}\nКод: ${event.code}`)
+// });
+
 // 417
 // Привяжите к тегу ul обработчик клика. 
 // В этом обработчике проверяйте с помощью свойства tagName, по какому тегу был клик. 
@@ -12,9 +123,8 @@
 //     };
 // });
 
-// 416
+// 416 -- ??? 
 // при клике на элемент этот элемент красился в зеленый цвет, а при двойном клике - в красный.
-// мой вариант:
 // let elem = document.querySelector('#elem');
 // function func(event) {
 // 	if (event.type === 'click') {

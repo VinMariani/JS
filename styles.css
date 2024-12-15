@@ -1,4 +1,4 @@
-.line-through {
+/* .line-through {
     text-decoration: line-through;
 }
 
@@ -18,4 +18,18 @@ li {
 	list-style-type: none;
 	margin-bottom: 20px;
 	border: 1px dashed black;
+} */
+
+div, ul, li {
+	padding: 20px;
+}
+
+div {
+	border: 1px solid red;
+}
+ul {
+	border: 1px solid orange;
+}
+li {
+	border: 1px solid green;
 }
