@@ -5,8 +5,298 @@
 //         event.preventDefault()
 //     }
 // })
+// 450 
 
-// 424 
+
+// 449
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('click', function() {
+//     let self = this;
+// 	setInterval(function() {
+// 		self.value = Number(elem.value) + 1;
+// 	}, 1000);
+// });
+
+// 448 - 3
+// let elem = document.querySelector('#elem');
+// let timerId = setInterval(function() {
+//     elem.value = Number(elem.value) - 1;
+//     if (Number(elem.value) === 0) {
+//         clearInterval(timerId);
+//     };
+// }, 1000);
+
+// 448 - 2
+// let elem = document.querySelector('#elem');
+// setInterval(function() {
+//     elem.value = Number(elem.value) - 1;
+// }, 1000);
+
+// 447 - 6
+// let start = document.querySelector('#start');
+// let stopBtn = document.querySelector('#stop');
+// let timerId;
+// let func;
+
+// start.addEventListener('click', function func() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds()); 
+// 	}, 1000);
+//     this.removeEventListener('click', func);
+// });
+
+// stopBtn.addEventListener('click', function func2() {
+// 	clearInterval(timerId);
+//     start.addEventListener('click', func)
+// });
+
+// 447 - 5
+// let start = document.querySelector('#start');
+// let stopBtn = document.querySelector('#stop');
+
+// let timerId;
+
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds()); 
+// 	}, 1000);
+// });
+
+// stopBtn.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+// 447 - 4
+// let start = document.querySelector('#start');
+// let stopBtn = document.querySelector('#stop');
+
+// let timerId;
+
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds()); 
+// 	}, 1000);
+// });
+
+// stopBtn.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+// 447 - 3
+// let start = document.querySelector('#start');
+// let stopBtn  = document.querySelector('#stop');
+// let timerId;
+
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds()); 
+// 	}, 1000);
+// });
+
+// stopBtn.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+// 447 - 2
+// let startBtn = document.querySelector('#start');
+// let stopBtn  = document.querySelector('#stop');
+// let timerId
+
+// startBtn.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + 
+// 			date.getSeconds()); 
+// 	}, 1000);
+// });
+
+// stopBtn.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+// 447 - 1
+// let i = 100;
+// let startBtn = document.querySelector('#start');
+// let stopBtn = document.querySelector('#stop');
+// let timerId;
+
+// startBtn.addEventListener('click', function func() {
+//     timerId = setInterval(function() {
+//         console.log(i--);
+//         if (i===90) {
+//             clearInterval(timerId);
+//         }
+//     }, 1000);
+//     this.removeEventListener('click', func);
+// });
+
+// stopBtn.addEventListener('click', function func() {
+//     clearInterval(timerId);
+// });
+
+// 446
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', function func() {
+//     let i = 100;
+
+//     setInterval(function() {
+//         console.log(i--);
+//     }, 1000);
+//     this.removeEventListener('click', func);
+// });
+
+// 445 
+// Сделайте кнопку, по нажатию на которую в консоль будет выводится обратный отсчет, начиная с 100. 
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', function() {
+//     let i = 100;
+
+//     setInterval(function() {
+//         console.log(i--);
+//     }, 1000);
+// });
+
+// 444
+// переменная, в которой изначально хранится число 10. 
+// Запустите таймер, который каждую секунду будет уменьшать значение этой переменной на 1 и выводить это значение в консоль.
+// Как только значение переменной достигнет нуля - остановите таймер.
+// let i = 10;
+// let timerId = setInterval(function() {
+//     console.log(--i);
+
+//     if (i===0) {
+//         clearInterval(timerId);
+//     };
+// }, 1000);
+
+// 443
+// переменная, в которой изначально хранится число 100. 
+// Запустите таймер, который каждую секунду будет уменьшать значение этой переменной на 1 и выводить это значение в консоль.
+// let i = 100;
+// setInterval(() => console.log(i--), 1000)
+
+// 442
+// таймер, который каждые 3 секунды будет что-нибудь выводить в консоль.
+// setInterval(function() {
+//     console.log('!');
+// }, 3000)
+
+// 441 
+// let elem = document.getElementById('elem');
+// function func(name, surname) {
+// 	console.log(this.value + ', ' + name + ' ' + surname); 
+// }
+// let Newfunc = func.bind(elem)
+// Newfunc('John', 'Smit'); // тут должно вывести 'hello, John Smit' 
+// Newfunc('Eric', 'Luis'); // тут должно вывести 'hello, Eric Luis' 
+
+// 440
+// let elem = document.querySelector('#elem');
+// function func(surname, name) {
+// 	console.log(this.value + ', ' + name + ' ' + surname); 
+// }
+// func.apply(elem, ['John', 'Smith']); 
+
+
+// 439
+// let elem = document.querySelector('#elem');
+// function func(surname, name) {
+// 	console.log(this.value + ', ' + name + ' ' + surname); 
+// }
+// func.call(elem, 'John', 'Smith'); 
+
+
+// 438
+// С помощью метода call и функции func выведите на экран value каждого из инпутов.
+// let inputs = document.querySelectorAll('input')
+// for (let elem of inputs) {
+//     function func() {
+//         console.log(this.value);
+//     }
+//     func.call(elem)
+// }
+
+// 437 -- ??
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', func);
+
+// function func() {
+//     let square = (param) => {
+// 		return param.value * param.value;
+// 	}
+//     alert( square(elem) );
+// };
+
+// 436
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', func);
+
+// function func() {
+// 	alert( square(this) );
+// 	function square(param) {
+// 		return param.value * param.value;
+// 	};
+// }
+
+// 435
+// self
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', func);
+// function func() {
+//     let self = this;
+// 	alert( square() );
+// 	function square() {
+// 		return self.value * self.value;
+// 	};
+//     square();
+// }
+
+// 430
+// делегирование события 2
+// let list   = document.querySelector('ul');
+// let items  = list.querySelectorAll('li');
+// list.addEventListener('click', function(event) {
+//     let li = event.target.closest('li');
+
+//     if (li) {
+//         li.innerHTML += '!';
+//     };
+// });
+
+// 429
+// с делегированием события
+// let button = document.querySelector('button');
+// let list   = document.querySelector('ul');
+// let items  = list.querySelectorAll('li');
+
+// list.addEventListener('click', function(event) {
+// 	event.target.textContent = event.target.textContent + '!';
+// });
+
+// button.addEventListener('click', function() {
+// 	let item = document.createElement('li');
+// 	item.textContent = 'item';
+// 	list.appendChild(item);
+// });
+
+// 426 
+// отмена всплытия
+// let parent = document.querySelector('#parent');
+// let button = document.querySelector('button');
+// let block  = document.querySelector('#block');
+// button.addEventListener('click', function(event) {
+// 	block.classList.add('active');
+//     event.stopPropagation();
+
+// });
+// parent.addEventListener('click', function() {
+// 	block.classList.remove('active');
+// });
+
 
 // 423 - 2
 // чтобы при клике на li, ей в конец добавлялся восклицательный знак, 

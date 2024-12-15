@@ -20,7 +20,7 @@ li {
 	border: 1px dashed black;
 } */
 
-div, ul, li {
+/* div, ul, li {
 	padding: 20px;
 }
 
@@ -32,4 +32,8 @@ ul {
 }
 li {
 	border: 1px solid green;
+} */
+
+#block:not(.active) {
+	display: none;
 }
